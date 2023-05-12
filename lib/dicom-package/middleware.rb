@@ -32,6 +32,7 @@ module DicomPackage
       file = Tempfile.new(filename)
       file.binmode
       file.write(binary)
+      file.rewind
       file
     end
   end
